@@ -5,18 +5,22 @@ def calculate():
     operator = input('Enter an operator (+,-,/,*): ')
     input2 = int(input('Enter a second number: '))
 
-    if operator == '+':
-        answer = input1 + input2
+    if input1.isdigit() and input2.isdigit():
+
+        if operator == '+':
+            answer = input1 + input2
+            
+        if operator == '-':
+            answer = input1 - input2
         
-    if operator == '-':
-        answer = input1 - input2
-    
-    if operator == '/':
-        answer = input1 / input2
-    
-    if operator == '*':
-        answer = input1 * input2
-    
+        if operator == '/':
+            answer = input1 / input2
+        
+        if operator == '*':
+            answer = input1 * input2
+        
+    else:
+        print('Invalid Input.')
 
     print(f'The answer is {answer}')
 calculate()
